@@ -1,0 +1,30 @@
+/* pages/login/login.wxss */
+.welcome{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 30px;
+}
+.Uname{
+  height: 30px;
+  margin: 10px;
+}
+.Upwd{
+  height: 30px;
+  margin: 10px;
+}
+text{
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+input{
+  width: 70%;
+  float: left;
+}
+button{
+  margin: 10px;
+}
+.flex-wrp{
+  text-align: center;
+}
+

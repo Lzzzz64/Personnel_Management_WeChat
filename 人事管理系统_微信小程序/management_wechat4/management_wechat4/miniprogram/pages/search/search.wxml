@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class="table">
+    <view class="tr">
+        <view class="th">编号：</view>
+        <input class="input" value="{{employee.employeeId}}" />
+    </view>
+    <view class="tr">
+      <view class="th">姓名：</view>
+      <input class="input" value="{{employee.employeeName}}" />
+    </view>
+    <view class="tr">
+      <view class="th">性别：</view>
+      <view class="input" wx:if="{{employee.gender % 2 == 0}}">
+        <input value="女" />
+      </view>
+      <view class="input" wx:else>
+        <input value="男" />
+      </view>
+    </view>
+    <view class="tr">
+      <view class="th">民族：</view>
+      <input class="input" value="{{employee.nation}}" />
+    </view>
+    <!-- <view class="tr">
+      <view class="th">部门号：</view>
+      <input class="input" value="{{employee.departmentId}}" />
+    </view>
+    <view class="tr">
+      <view class="th">岗位号：</view>
+      <input class="input" value="{{employee.positionId}}" />
+    </view> -->
+    <view class="tr">
+      <view class="th">联系电话：</view>
+      <input class="input" value="{{employee.phone}}" />
+    </view>
+    <button class="btn-back" bindtap="back">返回</button>
+</view>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jit.management.mapper.EmployeeMapper">
+<!--分页查询未入职-->
+    <select id="pageQuery" resultType="com.jit.management.pojo.EmployeeVO">
+        select a.employee_id, employee_name, gender, birth, identity_card, department_id, position_id, enroll_date, work_date, employee_form, personnel_source, political_outlook, nation, origin, phone, email, height, blood_type, marital_status, birth_place, household_registration_location, qualification, degree, graduate_school, major, graduate_date,b.start_time, end_time from employee a left join trial_period_time b on a.employee_id = b.employee_id
+        <where>
+            <if test="identityCard != null and identityCard != ''">
+                and identity_card like concat("%",#{identityCard},"%")
+            </if>
+            <if test="employeeName != null and employeeName != ''">
+                and employee_name like concat("%",#{employeeName},"%")
+            </if>
+            and status = 0
+        </where>
+        order by a.id
+    </select>
+<!--分页查询已入职-->
+    <select id="pageQuery1" resultType="com.jit.management.pojo.EmployeeVO">
+        select a.employee_id, employee_name, gender, birth, identity_card, department_id, position_id, enroll_date, work_date, employee_form, personnel_source, political_outlook, nation, origin, phone, email, height, blood_type, marital_status, birth_place, household_registration_location, qualification, degree, graduate_school, major, graduate_date,b.start_time, end_time from employee a left join trial_period_time b on a.employee_id = b.employee_id
+        <where>
+            <if test="employeeId != null and employeeId != ''">
+                and a.employee_id like concat("%",#{employeeId},"%")
+            </if>
+            <if test="employeeName != null and employeeName != ''">
+                and employee_name like concat("%",#{employeeName},"%")
+            </if>
+            <if test="departmentId != null and departmentId != ''">
+                and department_id like concat("%",#{departmentId},"%")
+            </if>
+            and status = 1
+        </where>
+        order by a.id
+    </select>
+</mapper>

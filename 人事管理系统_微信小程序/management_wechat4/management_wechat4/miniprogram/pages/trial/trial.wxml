@@ -1,0 +1,32 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">员工编号</view>
+    <view class="th">员工名称</view>
+    <view class="th">试用期信息</view>
+    <view class="th">处理</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{employeeId}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.employeeId}}</view>
+      <view class="td">{{item.employeeName}}</view>
+      <view class="td">
+        <button type="primary" size="mini" bindtap="handleMore" data-index="{{index}}">查看</button>
+      </view>
+      <view class="td">
+        <button type="success" size="mini" bindtap="handleUpdate" data-index="{{index}}">转正</button>
+        <button type="success" size="mini" bindtap="handleDelete" data-index="{{index}}">不予录用</button>
+      </view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.employeeId}}</view>
+      <view class="td">{{item.employeeName}}</view>
+      <view class="td">
+        <button type="primary" size="mini" bindtap="handleMore" data-index="{{index}}">查看</button>
+      </view>
+      <view class="td">
+        <button type="success" size="mini" bindtap="handleUpdate" data-index="{{index}}">转正</button>
+        <button type="success" size="mini" bindtap="handleDelete" data-index="{{index}}">不予录用</button>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,37 @@
+<view class="add-btn">
+  <button type="primary" size="mini" bindtap="handleAdd">添加岗位信息</button>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">编号</view>
+    <view class="th">名称</view>
+    <view class="th">类型</view>
+    <view class="th">编制</view>
+    <view class="th ">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{positionId}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.positionId}}</view>
+      <view class="td">{{item.positionName}}</view>
+      <view class="td">{{item.positionType}}</view>
+      <view class="td">{{item.positionNum}}</view>
+      <view class="td">
+        <button type="primary" size="mini" bindtap="handleUpdate" data-index="{{index}}">修改</button>
+        <button type="warn" size="mini" bindtap="handleDelete" data-index="{{index}}">删除</button>
+      </view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.positionId}}</view>
+      <view class="td">{{item.positionName}}</view>
+      <view class="td">{{item.positionType}}</view>
+      <view class="td">{{item.positionNum}}</view>
+      <view class="td">
+        <button type="primary" size="mini" bindtap="handleUpdate" data-index="{{index}}">修改</button>
+        <button type="warn" size="mini" bindtap="handleDelete" data-index="{{index}}">删除</button>
+      </view>
+    </view>
+  </block>
+</view> 
+
+

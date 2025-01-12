@@ -1,0 +1,75 @@
+<view style="margin-top:20px; font-size: large; font-weight: 1000; text-align:center;">员工信息管理</view>
+
+<view class="table">
+  <!-- 表头即第一行 -->
+  <view class="tr">
+    <view class="th">
+      <view style="color: white;">人员编号</view>
+    </view>
+    <view class="th">
+      <view style="color: white;">人员姓名</view>
+    </view>
+    <view class="th">
+      <view style="color: white;">基本信息</view>
+    </view>
+    <view class="th">
+      <view style="color: white;">调动</view>
+    </view>
+    <view class="th">
+      <view style="color: white;">调动</view>
+    </view>
+    <view class="th">
+      <view style="color: white;">处理</view>
+    </view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{employeeId}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.employeeId}}</view>
+      <view class="td">{{item.employeeName}}</view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSearch" data-index="{{index}}">
+          <view class="size">查询</view>
+        </button></view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSwift" data-index="{{index}}">
+          <view class="size">部门</view>
+        </button></view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSwift1" data-index="{{index}}">
+          <view class="size">岗位</view>
+        </button></view>
+      <view class="td"><button type="warn" size="mini" bindtap="handleResign" data-index="{{index}}">
+          <view class="size">离职</view>
+        </button></view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.employeeId}}</view>
+      <view class="td">{{item.employeeName}}</view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSearch" data-index="{{index}}">
+          <view class="size">查询</view>
+        </button></view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSwift" data-index="{{index}}">
+          <view class="size">部门</view>
+        </button></view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSwift1" data-index="{{index}}">
+          <view class="size">岗位</view>
+        </button></view>
+      <view class="td"><button type="warn" size="mini" bindtap="handleResign" data-index="{{index}}">
+          <view class="size">离职</view>
+        </button></view>
+    </view>
+  </block>
+
+  <!-- 表格第三行 -->
+  <!-- <view class="tr">
+        <view class="td">2</view>
+        <view class="td">哪吒</view>
+        <view class="td"><button style="font-size: 13px;width:60px;height: 20px;margin: 0px; padding: 0px; background-color: aquamarine;" bindtap="gotoPage"  >查看</button></view>
+        <view class="td"><button style="font-size: 13px;width:60px;height: 20px;margin: 0px; padding: 0px; background-color: aquamarine;" bindtap="gotoPage"  >入职</button></view>
+    </view> -->
+
+  <!-- 表格第四行 -->
+  <!-- <view class="tr">
+        <view class="td">3</view>
+        <view class="td">陈陈</view>
+        <view class="td"><button style="font-size: 13px;width:60px;height: 20px;margin: 0px; padding: 0px; background-color: aquamarine;" bindtap="gotoPage"  >查看</button></view>
+        <view class="td"><button style="font-size: 13px;width:60px;height: 20px;margin: 0px; padding: 0px; background-color: aquamarine;" bindtap="gotoPage"  >入职</button></view>
+    </view> -->
+</view>

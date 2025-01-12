@@ -1,0 +1,13 @@
+<!--pages/position/position.wxml-->
+<text>员工入职管理</text>
+<view class="page-section">
+    <view class="input_title">身份证号：</view>
+    <view>
+        <input bindinput="userNameInputAction" class="input"  name="num" auto-focus placeholder="身份证号"/>
+    </view>
+    <view class="input_title">姓名：</view>
+    <view>
+        <input bindinput="userNameInputAction" class="input" name="name" auto-focus placeholder="姓名"/>
+    </view>
+
+</view>

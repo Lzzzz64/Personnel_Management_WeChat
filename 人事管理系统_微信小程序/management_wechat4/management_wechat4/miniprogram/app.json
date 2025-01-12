@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/enter/enter",
+    "pages/employee/employee",
+    "pages/position/position",
+    "pages/department/department",
+    "pages/employee/foreign",
+    "pages/employee/family",
+    "pages/logs/logs",
+    "pages/employee/foreignQuery",
+    "pages/employee/foreignAdd",
+    "pages/department/departmentUpdate",
+    "pages/department/departmentAdd",
+    "pages/position/positionAdd",
+    "pages/position/positionUpdate",
+    "pages/employee/familyQuery",
+    "pages/employee/familyAdd",
+    "pages/trial/trial",
+    "pages/trial/trialMore",
+    "pages/2/2",
+    "pages/1/1",
+    "pages/search/search",
+    "pages/resign/resign",
+    "pages/departswift/departswift",
+    "pages/departswift1/departswift1",
+    "pages/positionswift/positionswift",
+    "pages/quit/quit",
+    "pages/position2/position",
+    "pages/employee/career",
+    "pages/employee/careerQuery",
+    "pages/employee/careerAdd"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "人事管理系统",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/enter/enter",
+        "text": "入职"
+      },
+      {
+        "pagePath": "pages/employee/employee",
+        "text": "员工"
+      },
+      {
+        "pagePath": "pages/position/position",
+        "text": "岗位"
+      },
+      {
+        "pagePath": "pages/department/department",
+        "text": "部门"
+      }
+    ]
+  }
+}

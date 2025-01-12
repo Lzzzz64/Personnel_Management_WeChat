@@ -1,0 +1,29 @@
+<!--pages/enter/enter.wxml-->
+<view style="margin-top:20px; font-size: large; font-weight: 1000; text-align:center;">员工入职管理</view>
+
+<view class="table">
+    <!-- 表头即第一行 -->
+    <view class="tr">
+        <view class="th"><view style="color:white">人员编号</view></view>
+        <view class="th"><view style="color:white">人员姓名</view></view>
+        <view class="th"><view style="color:white">基本信息</view></view>
+        <view class="th"><view style="color:white">操作</view></view>
+    </view>
+    <block wx:for="{{listData}}" wx:key="{{employeeId}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.employeeId}}</view>
+      <view class="td">{{item.employeeName}}</view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSearch" data-index="{{index}}">查询</button></view>
+      <view class="td"><button type="warn" size="mini" bindtap="handleEnter" data-index="{{index}}">入职</button></view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.employeeId}}</view>
+      <view class="td">{{item.employeeName}}</view>
+      <view class="td"><button type="primary" size="mini" bindtap="handleSearch" data-index="{{index}}">查询</button></view>
+      <view class="td"><button type="warn" size="mini" bindtap="handleDelete" data-index="{{index}}">入职</button></view>
+    </view>
+  </block>
+
+
+</view>
+

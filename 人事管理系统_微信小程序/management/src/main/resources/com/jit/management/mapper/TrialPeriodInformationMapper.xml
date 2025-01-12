@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jit.management.mapper.TrialPeriodInformationMapper">
+    <!--分页查询试用期员工-->
+    <select id="pageQuery" resultType="com.jit.management.pojo.TrialPeriodVO">
+        select a.employee_id,c.employee_name,b.start_time,b.end_time,a.comment,a.result,a.process_date,a.note from trial_period_information a left join trial_period_time b  on a.employee_id = b.employee_id left join employee c  on a.employee_id = c.employee_id
+        <where>
+            <if test="employeeId != null and employeeId != ''">
+                and a.employee_id like concat("%",#{employeeId},"%")
+            </if>
+            <if test="employeeName != null and employeeName != ''">
+                and c.employee_name like concat("%",#{employeeName},"%")
+            </if>
+            <if test="departmentId != null and departmentId != ''">
+                and c.department_id like concat("%",#{departmentId},"%")
+            </if>
+            <if test="positionId != null and positionId != ''">
+                and c.position_id like concat("%",#{positionId},"%")
+            </if>
+            <if test="result != null and result != ''">
+                and a.result like concat("%",#{result},"%")
+            </if>
+            and (result = 0 or result = 2) and c.status=1
+        </where>
+        order by a.employee_id
+    </select>
+    <!--分页查询已转正员工-->
+    <select id="pageQuery1" resultType="com.jit.management.pojo.TrialPeriodVO">
+        select a.employee_id,c.employee_name,b.start_time,b.end_time,a.comment,a.result,a.process_date,a.note from trial_period_information a left join trial_period_time b  on a.employee_id = b.employee_id left join employee c  on a.employee_id = c.employee_id
+        <where>
+            <if test="employeeId != null and employeeId != ''">
+                and a.employee_id like concat("%",#{employeeId},"%")
+            </if>
+            <if test="employeeName != null and employeeName != ''">
+                and c.employee_name like concat("%",#{employeeName},"%")
+            </if>
+            <if test="departmentId != null and departmentId != ''">
+                and c.department_id like concat("%",#{departmentId},"%")
+            </if>
+            <if test="positionId != null and positionId != ''">
+                and c.position_id like concat("%",#{positionId},"%")
+            </if>
+            <if test="result != null and result != ''">
+                and a.result like concat("%",#{result},"%")
+            </if>
+            and result = 1 and c.status=1
+        </where>
+        order by a.employee_id
+    </select>
+</mapper>

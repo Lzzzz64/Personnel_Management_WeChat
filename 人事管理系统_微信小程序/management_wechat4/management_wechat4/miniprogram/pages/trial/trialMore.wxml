@@ -1,0 +1,55 @@
+<view class="container">
+  <form bindsubmit="submitForm">
+    <view class="form-item">
+      <text>试用期开始时间：</text>
+      <input type="date" value="{{startTime}}" bindinput="inputStartTime" />
+    </view>
+
+    <view class="form-item">
+      <text>试用期结束时间：</text>
+      <input type="date" value="{{endTime}}" bindinput="inputEndTime" />
+    </view>
+
+    <view class="form-item">
+      <text>试用期部门考核评语：</text>
+      <input bindinput="inputComment" value="{{comment}}"></input>
+    </view>
+
+    <view class="form-item">
+      <text>考核结果：</text>
+      <radio-group bindchange="radioChange">
+        <label class="radio">
+          <radio value="0" checked="{{result==='0'}}"></radio>
+          试用期内
+        </label>
+        <label class="radio">
+          <radio value="1" checked="{{result==='1'}}"></radio>
+          转正
+        </label>
+        <!-- <label class="radio">
+          <radio value="2" checked="{{result==='2'}}"></radio>
+          延期
+        </label> -->
+        <label class="radio">
+          <radio value="3" checked="{{result==='3'}}"></radio>
+          不予录用
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="form-item">
+      <text>处理日期：</text>
+      <input type="date" value="{{processDate}}" bindinput="inputProcessDate" />
+    </view>
+
+    <view class="form-item">
+      <text>备注：</text>
+      <textarea placeholder="请输入备注" bindinput="inputNote" value="{{note}}"></textarea>
+    </view>
+
+    <view class="btn-container">
+      <button form-type="submit" class="submit-btn">提交</button>
+      <button class="btn-cancel" bindtap="cancel">取消</button>
+    </view>
+  </form>
+</view>

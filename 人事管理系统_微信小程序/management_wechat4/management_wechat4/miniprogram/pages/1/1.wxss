@@ -1,0 +1,30 @@
+/* pages/1/1.wxss */
+/* index.wxss */  
+.container {  
+  padding: 20rpx;  
+}  
+  
+.table {  
+  display: flex;  
+  flex-direction: column;  
+  width: 100%;  
+}  
+  
+.table-row {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  padding: 10rpx 0;  
+  border-bottom: 1px solid #ccc;  
+}  
+  
+.table-cell {  
+  flex: 1;  
+  padding: 0 10rpx;  
+}  
+  
+.input-text {  
+  width: 100%;  
+  border: 1px solid #ccc;  
+  padding: 5rpx;  
+}

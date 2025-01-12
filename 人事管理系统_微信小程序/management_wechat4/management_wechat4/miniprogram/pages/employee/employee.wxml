@@ -1,0 +1,39 @@
+<view class="add-btn">
+  <view class="th2">员工其他信息管理</view>
+</view>
+<view class="view_fengexian">
+  <view></view>
+  <view></view>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th"></view>
+    <view class="th"></view>
+    <view class="th "></view>
+  </view>
+  <view class="button-container">
+    <button class="button" bindtap="handleInfo">员工信息管理</button>
+    <view class="view_fengexian">
+      <view></view>
+      <view></view>
+    </view>
+    <button class="button" bindtap="handleCareer">员工职业生涯信息管理</button>
+    <view class="view_fengexian">
+      <view></view>
+      <view></view>
+    </view>
+    <button class="button" bindtap="handleTrial">员工试用期管理</button>
+    <view class="view_fengexian">
+      <view></view>
+      <view></view>
+    </view>
+    <button class="button" bindtap="handleForeign">员工外语能力管理</button>
+    <view class="view_fengexian">
+      <view></view>
+      <view></view>
+    </view>
+    <button class="button" bindtap="handleFamily">员工家庭成员社会关系管理</button>
+  </view>
+
+</view>

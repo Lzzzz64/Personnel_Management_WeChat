@@ -1,0 +1,93 @@
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 5rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.th1 {
+  width: 40%;
+  justify-content: center;
+  background: #fafafa;
+  color: rgb(8, 226, 241);
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.th1 {
+  width: 80%;
+  justify-content: center;
+  background: #fafafa;
+  color: rgb(8, 23, 241);
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+/* 在对应的 wxss 文件中定义样式 */
+.add-btn {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  margin-top: 20rpx; /* 适当调整按钮与上方内容的间距 */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 可选，使按钮在水平方向上居中对齐 */
+}
+
+.button {
+  width: 200rpx; /* 按钮宽度 */
+  height: 100rpx; /* 按钮高度 */
+  margin-top: 40rpx; /* 按钮之间的上边距 */
+  background-color: #007bff; /* 按钮背景颜色 */
+  color: #fff; /* 按钮文字颜色 */
+  font-size: 28rpx; /* 按钮文字大小 */
+  border-radius: 8rpx; /* 按钮圆角 */
+  line-height: 60rpx; /* 按钮高度与文字居中对齐 */
+  text-align: center; /* 文字居中 */
+}
+.view-contain-ti {
+  display: flex;
+  height: 40px;
+  margin: 20px;
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+
+.text-ti {
+  position: absolute;
+  font-size: 12px;
+  background: white;
+  margin: -10px 0 0 10px;
+  padding: 0 5px;
+  color: rgb(144, 147, 167);
+}
+
+.input1 {
+  margin:  auto 10px;
+}

@@ -1,0 +1,67 @@
+<view class="container">
+  <view style="font-family:sans-serif;font-size:30px;">职业生涯信息</view>
+
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+
+
+
+  <!-- <view wx:for="{{employee.relation}}" wx:key="index"> -->
+    <view wx:for="{{employee.career}}" wx:key="index">
+  <view class="view-contain-ti">
+    <text class="text-ti">起始年月</text>
+    <input class="input1" value="{{newCareer.startTime}}" bindinput="inputStartTime" />
+  </view>
+  
+  <view class="view-contain-ti">
+    <text class="text-ti">截止年月</text>
+    <input class="input1" value="{{newCareer.endTime}}" bindinput="inputEndTime" />
+  </view>
+
+  <view class="view-contain-ti">
+    <text class="text-ti">所在单位名称</text>
+    <input class="input1" value="{{newCareer.organizationName}}" bindinput="inputOrganizationName" />
+  </view>
+
+  <view class="view-contain-ti">
+    <text class="text-ti">担任职务</text>
+    <input class="input1" value="{{newCareer.position}}" bindinput="inputPosition" />
+  </view>
+
+  <view class="view-contain-ti">
+    <text class="text-ti">从事工作内容</text>
+    <input class="input1" value="{{newCareer.jobDescription}}" bindinput="inputJobDescription" />
+  </view>
+
+  <view class="view-contain-ti">
+    <text class="text-ti">月薪</text>
+    <input class="input1" value="{{newCareer.salary}}" bindinput="inputSalary" />
+  </view>
+
+  <view class="view-contain-ti">
+    <text class="text-ti">备注</text>
+    <input class="input1" value="{{newCareer.note}}" bindinput="inputNote" />
+  </view>
+
+
+    <button type="warn" size="mini" bindtap="handleDelete" data-index="{{index}}">删除</button>
+    
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+
+  <button class="btn-save" bindtap="savePosition">确定</button>
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+  <button class="btn-cancel" bindtap="cancelAdd">取消</button>
+</view>
+</view>
+
+
+
+

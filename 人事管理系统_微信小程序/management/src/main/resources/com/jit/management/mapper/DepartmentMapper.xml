@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jit.management.mapper.DepartmentMapper">
+    <update id="update">
+        update department
+        <set>
+            <if test="departmentName != null and departmentName != ''">
+                department_name = #{departmentName},
+            </if>
+        </set>
+        where department_id = #{departmentId}
+    </update>
+
+
+    <select id="findAllDepartment" resultType="com.jit.management.pojo.Department">
+        select  department_id, department_name from department
+        <where>
+            <if test="departmentId != null and departmentId != ''">
+                and department_id like concat("%",#{departmentId},"%")
+            </if>
+            <if test="departmentName != null and departmentName != ''">
+                and department_name like concat("%",#{departmentName},"%")
+            </if>
+        </where>
+        order by department_id
+    </select>
+</mapper>

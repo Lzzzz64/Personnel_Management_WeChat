@@ -1,0 +1,102 @@
+/* pages/search/search.wxss */
+/* .tr, .th, .td{
+  display: flex;
+  flex-direction: row;
+} */
+
+/* pages/search/search.wxss */  
+  
+/* 表格容器 */  
+.table {  
+  display: flex;  
+  flex-direction: column;  
+  padding: 16px;  
+  background-color: #fff;  
+  border-radius: 8px;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}  
+  
+/* 表格行 */  
+.tr {  
+  display: flex;  
+  flex-direction: row;  
+  justify-content: space-between;  
+  align-items: center;  
+  margin-bottom: 15px;  
+}  
+  
+/* 表格头 */  
+.th {  
+  width: 100px; /* 根据需要调整 */  
+  text-align: right;  
+  font-weight: bold;  
+  color: #666;  
+}  
+  
+/* 输入框 */  
+.input {  
+  flex: 1; /* 占据剩余空间 */  
+  padding-left: 3px;
+  margin-left: 2px;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+  align-items: center;
+  box-sizing: border-box;  
+  font-size: 16px;  
+}  
+  
+/* 邮箱显示 */  
+.td {  
+  font-size: 14px;  
+  color: #999;  
+  margin-bottom: 16px;  
+}  
+  
+/* 查询按钮 */  
+.btn-primary {  
+  background-color: #009688;  
+  color: #fff;  
+  border-radius: 4px;  
+  padding: 8px 16px;  
+  margin-right: 8px;  
+}  
+  
+/* 返回按钮 */  
+.btn-back {  
+  background-color: #fff;  
+  color: #009688;  
+  border: 1px solid #009688;  
+  border-radius: 4px;  
+  padding: 8px 16px;  
+}  
+  
+/* 修正错误：将联系电话的value从employee.employeeName更改为employee.phoneNumber */  
+/* （注意：这里假设你有一个employee.phoneNumber属性）*/  
+.tr:nth-child(6) .input {  
+  value: "{{employee.phoneNumber}}" /* 注意：这里只是示意，WXML中不能直接在WXSS中设置value */  
+}  
+  
+/* （样式修正）查询按钮的位置和样式 */  
+.tr:last-child {  
+  justify-content: flex-end;  
+  margin-bottom: 0;  
+}  
+  
+.tr:last-child button {  
+  margin-left: 8px; /* 添加一些间距 */  
+}
+
+.readonly-input {  
+  /* 模仿 input 组件的样式 */  
+  border: 1px solid #ccc;  
+  padding: 5px;  
+  /* 其他你需要的样式 */  
+  flex: 1; /* 占据剩余空间 */  
+  padding-left: 3px;
+  margin-left: 2px;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+  align-items: center;
+  box-sizing: border-box;  
+  font-size: 16px; 
+}

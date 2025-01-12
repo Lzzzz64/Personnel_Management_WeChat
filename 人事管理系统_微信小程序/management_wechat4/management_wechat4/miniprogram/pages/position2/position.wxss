@@ -1,0 +1,6 @@
+/* pages/position/position.wxss */
+.input{
+  font-size: 30rpx;
+  border: 3rpx solid gray;
+  margin: 10rpx;
+}

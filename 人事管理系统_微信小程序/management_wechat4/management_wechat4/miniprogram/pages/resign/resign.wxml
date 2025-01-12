@@ -1,0 +1,33 @@
+<!--pages/resign/resign.wxml-->
+<view class="table">
+    <view>离职信息</view>
+    <view class="tr">
+        <view class="th">员工编号：</view>
+        <input class="input" value="{{employee.employeeId}}" />
+    </view>
+    <view class="tr">
+        <view class="th">员工姓名：</view>
+        <input class="input" value="{{employee.employeeName}}" />
+    </view>
+    <view class="tr">
+        <view class="th" >离职日期：</view>
+        <input class="input" value="{{localDateTime}}" bindinput="inputDate"/>
+    </view>
+    <view class="tr">
+      <view class="th">离职类型：</view>
+      <input class="input" bindinput="inputType" />
+    </view>
+    
+    <view class="tr">
+      <view class="th">离职去向：</view>
+      <input class="input" bindinput="inputHead" />
+    </view>
+    <view class="tr">
+      <view class="th">备注：</view>
+      <input class="input" bindinput="inputInfo" />
+    </view>
+    <view class="btn-bottom">
+      <button class="btn-determine" bindtap="handleDelete">确定</button>
+      <button class="btn-cancel" bindtap="cancel">取消</button>
+    </view>
+</view>

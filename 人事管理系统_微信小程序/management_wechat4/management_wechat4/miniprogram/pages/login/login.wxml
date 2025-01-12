@@ -1,0 +1,14 @@
+<view class="content">
+  <view class="welcome">
+    管理员登录
+  </view>
+  <view class="Uname">
+    <text>用户名：</text>
+    <input bindinput="accountInput" placeholder="    请输入您的用户名" />
+  </view>
+  <view class="Upwd">
+    <text>密码：</text>
+    <input bindinput="pwdBlur" password placeholder="     请输入您的密码" />
+  </view>
+  <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" bindtap="login">登录</button>
+</view>

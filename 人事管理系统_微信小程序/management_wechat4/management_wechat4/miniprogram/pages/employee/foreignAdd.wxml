@@ -1,0 +1,41 @@
+<view class="container">
+  <view style="font-family:sans-serif;font-size:30px;">添加擅长外语信息</view>
+  <text>\n</text>
+
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+</view>
+
+
+  <view class="view-contain-ti">
+    <text class="text-ti">外语语种：</text>
+    <input class="input1" value="{{type}}" bindinput="inputForeignType" />
+  </view>
+
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+</view>
+
+<view class="form-item">
+  <view class="label">熟练程度</view>
+  <picker mode="selector" range="{{['完全不懂', '少量，不能进行业务沟通', '有限的业务沟通', '一般，业务沟通仍受少量限制', '好，无困难地进行谈判和讲演', '流利，在商务中自如地运用']}}" bindchange="changeProficiency" value="{{proficiency}}">
+    <view class="picker">
+      {{proficiency == 0 ? '完全不懂' : proficiency == 1 ? '少量，不能进行业务沟通' : proficiency == 2 ? '有限的业务沟通' : proficiency == 3 ? '一般，业务沟通仍受少量限制' : proficiency == 4 ? '好，无困难地进行谈判和讲演' :'流利，在商务中自如地运用'}}
+    </view>
+  </picker>
+
+</view>
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+</view>
+
+  <button class="btn-save" bindtap="addForeign">添加</button>
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+</view>
+  <button class="btn-cancel" bindtap="cancelAdd">取消</button>
+</view>

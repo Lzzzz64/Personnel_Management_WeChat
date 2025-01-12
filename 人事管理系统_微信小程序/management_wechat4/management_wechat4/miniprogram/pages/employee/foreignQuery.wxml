@@ -1,0 +1,46 @@
+<view class="container">
+  <view style="font-family:sans-serif;font-size:30px;">外语能力信息</view>
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+
+  <view class="view-contain-ti">
+    <text class="text-ti">员工号</text>
+    <input class="input1" value="{{employee.employeeId}}" disabled />
+    <!-- <view class="value">{{position.positionId}}</view> -->
+  </view>
+  
+  <view class="view-contain-ti">
+    <text class="text-ti">员工姓名</text>
+    <input class="input1" value="{{employee.employeeName}}" disabled />
+  </view>
+
+  <view class="form-item">
+  <view wx:for="{{employee.foreign}}" wx:key="{{type}}">
+    <view class="label">{{item.type}}</view>
+    <picker mode="selector" range="{{['完全不懂', '少量，不能进行业务沟通', '有限的业务沟通', '一般，业务沟通仍受少量限制', '好，无困难地进行谈判和讲演', '流利，在商务中自如地运用']}}" bindchange="changeProficiency" data-index="{{index}}" value="{{item.proficiency}}">
+      <view class="picker">
+        {{item.proficiency == 0 ? '完全不懂' : item.proficiency == 1 ? '少量，不能进行业务沟通' : item.proficiency == 2 ? '有限的业务沟通' : item.proficiency == 3 ? '一般，业务沟通仍受少量限制' : item.proficiency == 4 ? '好，无困难地进行谈判和讲演' : '流利，在商务中自如地运用'}}
+      </view>
+    </picker>
+    <button type="warn" size="mini" bindtap="handleDelete" data-index="{{index}}">删除</button>
+    <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+  </view>
+</view>
+
+<view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+
+  <button class="btn-save" bindtap="savePosition">保存</button>
+  <view class="view_fengexian">
+	<view ></view>
+	<view ></view>
+  </view>
+  <button class="btn-cancel" bindtap="cancelAdd">取消</button>
+</view>
